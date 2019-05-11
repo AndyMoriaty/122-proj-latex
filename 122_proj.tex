@@ -239,40 +239,48 @@ We also compared two versions of OFDM. One is with the multi-path fading effect,
 
 
 \section{Hardware Simulation}
+The hardwares we are using are: 1 Raspberry Pi, 1 Ham Radio, 1 sdr. The Raspberry Pi is to process the data and set up the connnection, the Ham ratio is to transmit the data and the sdr is to receive the data we transmitted.\\
+The hardware implementation is almost the same as the software OFDM simulation. We are using the qpsk modulation, OFDM. To simplify, we didn't implement the cyclic prefix because the channel estimation is too hard for us to implement. In this part I will mainly discuss two part, OFDM, chirp and the result of hardware simulation.
+\subsection{Hardware OFDM}
+The OFDM is much harder to implement in hardware. Once the sampling frequency of the Ham Radio is fixed, our signal will be transmitted in the frequency domain in $[-\frac{1}{2 f_s},\frac{1}{2 f_s}]$. Now that we have to transmit on 1 channel, we cannot be allowed to use the whole $[-\frac{1}{2 f_s},\frac{1}{2 f_s}]$ domain, all we can use is a small portion of it. So the way to implement the OFDM is to insert a lot of zeros into the array and then do the IFFT. The disadvantage is that the baud rate will be reduced significantly, however, even so, the baud rate of OFDM can still be higher than FDM if choosing the proper combination of the parameters. After all, the FDM signal cannot represent the carrier frequency using just one point.
 
-
-
-% \begin{figure}[h]
-%     % test figure
-%     \centering
-%     \includegraphics[width=0.5\textwidth]{./asset/test.png}
-%     % \caption{Figure P2_63-1}
-%     % \label{fig:2_63}
-% \end{figure}
-
-%     %test formula
-%     \[\begin{aligned}
-%         y[n]&=(x[n]\cdot e^{-j\omega_0n})*h[n]\\
-%         &=\sum_{m=-\infty}^{\infty}x[n-m]\cdot e^{-j\omega_0(n-m)}\cdot h[m]\\
-%         if\quad x[n]&=a x_1[n]+bx_2[n]\\
-%         y[n]&=\sum_{m=-\infty}^{\infty}(a x_1[n-m]+bx_2[n-m])\cdot e^{-j\omega_0(n-m)}\cdot h[m]\\
-%         &=a\times \sum_{m=-\infty}^{\infty}x_1[n-m]\cdot e^{-j\omega_0(n-m)}\cdot h[m]+b\times \sum_{m=-\infty}^{\infty}x_2[n-m]\cdot e^{-j\omega_0(n-m)}\cdot h[m]\\
-%         &=ay_1[n]+by_2[n]
-%     \end{aligned}\]
-
-
-%     % test bracks
-%     \[\begin{cases}
-%         \quad \mathcal F \{x[n]\}&=X(\omega)\\
-%         \quad \mathcal F \{h_i[n]\}&=H(\omega)
-%         \end{cases}\]
-%     % test
-%     \begin{enumerate}
-% 	\item \textbf{What is the impulse response of the system?}\\
-% 	\item \textbf{Is the system causal?}\\
-%   	 I think the system is not casual because the transfer function has infinit support. When doing convolution, we have to know the value in the future.
-%   	\item \textbf{Is the system BIBO stable?}\\
-% 	\end{enumerate}
-
-
+\subsection{Chirp Preamble}
+The preamble for the OFDM that we are using is a Chirp signal.
+\begin{figure}[h]
+    % test figure
+    \centering
+    \includegraphics[width=0.5\textwidth]{./asset/chirp.png}
+    \caption{Figure Chirp signal}
+    \label{fig:Chirp_signal}
+\end{figure}
+This is how the chirp signal (Figure~\ref{fig:Chirp_signal}) looks like. With the increase of the time index, the frequency is also increasing. If the time domain plot of this signal means nothing to you, no worry, it looks like nothing to me too. However, if we take a look at its spectrogram (Figure~\ref{fig:Chirp_spectrogram}), we will find that in the frequency-time domain, it is a straight line. When trying to find the packet, we have to do cross-correlation with the preamble. This chirp signal, having this unique pattern in time and frequency domain, is a great preamble because it is really sparse not only in the time domain but also in the frequency domain. In a given time, it only has one frequency and for a given frequency, it only has 1 time sample.
+\begin{figure}[h]
+    % test figure
+    \centering
+    \includegraphics[width=0.5\textwidth]{./asset/chirp_spect.png}
+    \caption{Figure Chirp spectrogram}
+    \label{fig:Chirp_spectrogram}
+\end{figure}
+\subsection{The result of the transmission}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{./asset/message.png}
+    \caption{Spectrogram of the chirp}
+    \label{fig:chirp_spectrogram}
+\end{figure}
+The message we are sending is a bit array. In the spectrogram Figure~\ref{fig:chirp_spectrogram}, it looks like this. 
+After adding the preamble, it looks like this (Figure~\ref{fig:spectrogram_trm}).
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{./asset/msg_received.png}
+    \caption{Spectrogram of transmission signal}
+    \label{fig:spectrogram_trm}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\textwidth]{./asset/msg_received.png}
+    \caption{Spectrogram of transmission signal}
+    \label{fig:msg_received}
+\end{figure}
+After transmitting, the spectrogram of the received signal looks like this (Figure~\ref{fig:msg_received}).
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.5.29)  10 MAY 2019 20:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.5.29)  10 MAY 2019 23:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -474,7 +474,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 99--99
 
  []
 
-<./asset/freq.png, id=140, 1606.0pt x 1089.06876pt>
+<./asset/freq.png, id=152, 1606.0pt x 1089.06876pt>
 File: ./asset/freq.png Graphic file (type png)
 <use ./asset/freq.png>
 Package pdftex.def Info: ./asset/freq.png  used on input line 103.
@@ -510,7 +510,7 @@ Non-PDF special ignored!
 
 
 ]
-<./asset/ISI.jpg, id=158, 433.62pt x 322.20375pt>
+<./asset/ISI.jpg, id=170, 433.62pt x 322.20375pt>
 File: ./asset/ISI.jpg Graphic file (type jpg)
 <use ./asset/ISI.jpg>
 Package pdftex.def Info: ./asset/ISI.jpg  used on input line 115.
@@ -525,7 +525,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 120--120
 
  []
 
-<./asset/fading.png, id=159, 485.012pt x 326.821pt>
+<./asset/fading.png, id=171, 485.012pt x 326.821pt>
 File: ./asset/fading.png Graphic file (type png)
 <use ./asset/fading.png>
 Package pdftex.def Info: ./asset/fading.png  used on input line 124.
@@ -535,7 +535,7 @@ Overfull \hbox (6.0pt too wide) in paragraph at lines 124--125
  [][] 
  []
 
-<./asset/OFDM_pipeline.png, id=161, 1122.1925pt x 537.00626pt>
+<./asset/OFDM_pipeline.png, id=173, 1122.1925pt x 537.00626pt>
 File: ./asset/OFDM_pipeline.png Graphic file (type png)
 <use ./asset/OFDM_pipeline.png>
 Package pdftex.def Info: ./asset/OFDM_pipeline.png  used on input line 140.
@@ -601,7 +601,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 171--171
 
  []
 
-<./asset/FDM_pipeline.png, id=173, 1347.0325pt x 551.05875pt>
+<./asset/FDM_pipeline.png, id=185, 1347.0325pt x 551.05875pt>
 File: ./asset/FDM_pipeline.png Graphic file (type png)
 <use ./asset/FDM_pipeline.png>
 Package pdftex.def Info: ./asset/FDM_pipeline.png  used on input line 177.
@@ -672,6 +672,65 @@ Underfull \hbox (badness 10000) in paragraph at lines 218--218
  []
 
 [4]
+<./asset/chirp.png, id=198, 604.2575pt x 422.57875pt>
+File: ./asset/chirp.png Graphic file (type png)
+<use ./asset/chirp.png>
+Package pdftex.def Info: ./asset/chirp.png  used on input line 252.
+(pdftex.def)             Requested size: 234.8775pt x 164.25696pt.
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 252--253
+ [][] 
+ []
+
+<./asset/chirp_spect.png, id=201, 889.3225pt x 335.2525pt>
+File: ./asset/chirp_spect.png Graphic file (type png)
+<use ./asset/chirp_spect.png>
+Package pdftex.def Info: ./asset/chirp_spect.png  used on input line 260.
+(pdftex.def)             Requested size: 234.8775pt x 88.53967pt.
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 260--261
+ [][] 
+ []
+
+<./asset/message.png, id=202, 1379.1525pt x 527.9725pt>
+File: ./asset/message.png Graphic file (type png)
+<use ./asset/message.png>
+Package pdftex.def Info: ./asset/message.png  used on input line 267.
+(pdftex.def)             Requested size: 234.8775pt x 89.91525pt.
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 267--268
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<./asset/msg_received.png, id=205, 1383.1675pt x 524.96124pt>
+File: ./asset/msg_received.png Graphic file (type png)
+<use ./asset/msg_received.png>
+Package pdftex.def Info: ./asset/msg_received.png  used on input line 275.
+(pdftex.def)             Requested size: 234.8775pt x 89.13809pt.
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 275--276
+ [][] 
+ []
+
+File: ./asset/msg_received.png Graphic file (type png)
+<use ./asset/msg_received.png>
+Package pdftex.def Info: ./asset/msg_received.png  used on input line 281.
+(pdftex.def)             Requested size: 234.8775pt x 89.13809pt.
+
+Overfull \hbox (6.0pt too wide) in paragraph at lines 281--282
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[5 <./asset/chirp.png (PNG copy)> <./asset/chirp_spect.png>]
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -683,23 +742,21 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 278.
-[5
-
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 278.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 311.
+[6 <./asset/message.png> <./asset/msg_received.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 311.
  (./122_proj.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 278.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 278.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 311.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 311.
 Package rerunfilecheck Info: File `122_proj.out' has not changed.
-(rerunfilecheck)             Checksum: B4C1ADBD2D3CC296A7B2E987A78F4669;2437.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 278.
+(rerunfilecheck)             Checksum: ED2765F307FCE87D33C669944AEBFE1E;2644.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 311.
  ) 
 Here is how much of TeX's memory you used:
- 8069 strings out of 492649
- 125478 string characters out of 6129622
- 222376 words of memory out of 5000000
- 11825 multiletter control sequences out of 15000+600000
+ 8105 strings out of 492649
+ 126210 string characters out of 6129622
+ 222668 words of memory out of 5000000
+ 11849 multiletter control sequences out of 15000+600000
  36371 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  36i,11n,43p,1023b,401s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -716,10 +773,10 @@ xmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2018/texmf-dist/f
 onts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type
 1/urw/times/utmr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/urw/time
 s/utmri8a.pfb>
-Output written on 122_proj.pdf (5 pages, 659845 bytes).
+Output written on 122_proj.pdf (6 pages, 1786105 bytes).
 PDF statistics:
- 243 PDF objects out of 1000 (max. 8388607)
- 213 compressed objects within 3 object streams
- 45 named destinations out of 1000 (max. 500000)
- 298 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 277 PDF objects out of 1000 (max. 8388607)
+ 239 compressed objects within 3 object streams
+ 54 named destinations out of 1000 (max. 500000)
+ 342 words of extra memory for PDF output out of 10000 (max. 10000000)
 
